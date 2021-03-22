@@ -5,4 +5,7 @@
 3. Display alternate web pages like mobile
 4. Create global HTML templates
 
+From Command Line > Navigate to folder where index file lives: 
+php -S localhost:8000
+
 */
