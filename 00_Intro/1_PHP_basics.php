@@ -8,4 +8,14 @@
 From Command Line > Navigate to folder where index file lives: 
 php -S localhost:8000
 
+All user defined functions like classes and keywords (if, else, while, echo) are NOT CASE-SeNsItIve
+
+All Variables ARE CASE-SENSITIVE
+
+<?php 
+        $color="red";
+
+        echo "My car is " . $color;
+?>
+
 */
