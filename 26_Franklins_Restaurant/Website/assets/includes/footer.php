@@ -19,12 +19,14 @@
 
                     <em>Sunday - Monday</em><br>
                     Closed<br><br>
+
+                    <?php include('store-hours.php'); ?>
                 </div>
                 <!-- column -->
             </div>
             <!-- footer -->
 
-            <small>&copy;<?php echo date('Y');?> Jonathan Rhymes</small>
+            <small>&copy;<?php echo date('Y');?> <?php echo $companyName; ?></small>
         </div>
         <!-- content -->
     </div>
