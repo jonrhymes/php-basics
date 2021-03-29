@@ -30,7 +30,17 @@
 				
 				<?php
 					
-					// your code here
+					function hangTen(){
+						echo "Surf's up! Grab your board!";
+					}
+
+					$surfIsUp = false;
+
+					if ($surfIsUp ) {
+						hangTen();
+					} else {
+						echo "Bummer bro!";
+					};
 					
 				?>
 				
