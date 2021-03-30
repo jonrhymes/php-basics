@@ -10,6 +10,32 @@
     
     <h1>Get in touch with us!</h1>
 
+    <?php 
+    
+        // Check for header injections
+        function has_header_injections($str){
+            return preg_match( "/[\r\n]/", $str);
+        }
+
+        if (isset($_POST['contact_submit'])) {
+            $name       = trim($_POST['name']);
+            $email      = trim($_POST['email']);
+            $msg        = $_POST['message'];
+
+            // Check to see if $name or $email have header injections
+
+            if (has_header_injections($name) || has_header_injections($email)) {
+                die(); // If true, kill the script
+            }
+
+            if ( !$name || !$email || !$msg ) {
+                echo '<h4 class="error">All fields required.</h4><a href="contact.php" class="button block">Go back and try again</a>';
+                exit;
+
+            }
+        }
+    ?>
+
     <form method="post" action="" id="contact-form">
 
         <label for="name">Your name</label>
